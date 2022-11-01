@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
+    
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1,
@@ -10,6 +12,7 @@
 
     <link rel="icon" href="devchallenges.png" />
 
+    <!-- ?  -->
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -17,79 +20,269 @@
     />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      href="style.css"
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
     <title>Devchallenges</title>
 
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
+    
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
 
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+    <div class="left_side" id="div_left">
+
+      <p class="home" href="#"><span >Dev</span>challenges.io </p>
+
+      <p>Colors</p>
+      <p>Typography</p>
+      <p>Space</p>
+      <p>Buttons</p>
+      <p>Inputs</p>
+      <p>Grid</p>
+
+    </div>
+
+    <div class="buttons">
+      <h1> Buttons </h1>
+      <div class="row_1">
+        <div class="box" id="b1">
+          <p> &lt; Button &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+        
+        <div class="box">
+          <p> &:hover, &:focus </p>
+          <button>
+            Default
+          </button>
+        </div>
+
+
       </div>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+      <div class="row_2">
+        <div class="box">
+          <p> &lt; Button variant=”outline” &sol; &gt; </p>
+          <button type="button">
+            Default
+          </button>
+        </div>
+        
+        <div class="box">
+          <p> &:hover, &:focus </p>
+          <button type="button">
+            Default
+          </button>
+        </div>
+
+      </div>
+
+      <div class="row_3">
+        <div class="box">
+          <p> &lt; Button variant=”text” &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+        
+        <div class="box">
+          <p> &:hover, &:focus </p>
+          <button>
+            Default
+          </button>
+        </div>
+
+      </div>
+
+      <div class="row_4">
+        <div class="box">
+          <p> &lt; Button disableShadow &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+        
+
+      </div>
+
+      <div class="row_5">
+        <div class="box">
+          <p> &lt; Button disabled &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+        
+        <div class="box">
+          <p> Button variant=”text” disabled </p>
+          <button>
+            Default
+          </button>
+        </div>
+
+      </div>
+
+
+      <div class="row_6">
+        <div class="box left">
+          <p> &lt; Button startIcon="arrow_circle_right" &sol; &gt; </p>
+          <button class="icon-1">
+            <i class="material-symbols-outlined">arrow_circle_right</i>
+            
+            Default
+          </button>
+        </div>
+        
+        <div class="box left">
+          <p> &lt; Button startIcon=”local_grocery_store” &sol; &gt; </p>
+          <button class="icon-2">
+            <i class="material-symbols-outlined">local_grocery_store</i>
+            Default
+          </button>
+        </div>
+        
+        
+        <div class="box left">
+          <p> &lt; Button startIcon=”token” &sol; &gt; </p>
+          <button class="icon-2">
+            <i class="material-symbols-outlined">token</i>
+            Default
+          </button>
+        </div>
+
+      </div>
+
+      <div class="row_6">
+        <div class="box right">
+          <p> &lt; Button endIcon=”dataset” &sol; &gt; </p>
+          <button class="icon-1">
+            
+            Default
+            <i class="material-symbols-outlined">dataset</i>
+          </button>
+        </div>
+        
+        <div class="box right">
+          <p> &lt; Button endIcon=”keyboard_voice” &sol; &gt; </p>
+          <button class="icon-2">
+            Default
+            <i class="material-symbols-outlined">keyboard_voice</i>
+          </button>
+        </div>
+
+        <div class="box right">
+          <p> &lt; Button endIcon=”app_registration” &sol; &gt; </p>
+          <button class="icon-1">
+            
+            
+            Default
+            <i class="material-symbols-outlined">app_registration</i>
+          </button>
+        </div>
+      
+
+      </div>
+
+      
+
+
+      <div class="row_7">
+        <div class="box">
+          <p> &lt; Button size=”sm” &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+        
+        <div class="box">
+          <p> &lt; Button size=”md” &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+
+        <div class="box">
+          <p> &lt; Button size=”lg” &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+
+      </div>
+
+      <div class="row_8">
+        <div class="box">
+          <p> &lt; Button color=”default” &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+        
+        <div class="box">
+          <p> &lt; Button color=”primary” &sol; &gt; </p>
+          <button>
+            Primary
+          </button>
+        </div>
+
+        <div class="box">
+          <p> &lt; Button color=”secondary” &sol; &gt; </p>
+          <button>
+            Secondary
+          </button>
+        </div>
+
+        <div class="box">
+          <p> &lt; Button color=”danger” &sol; &gt; </p>
+          <button>
+            Danger
+          </button>
+        </div>
+
+      </div>
+
+      <div class="row_9">
+        <div class="box">
+          <p> &lt; Button variant=”text” &sol; &gt; </p>
+          <button>
+            Default
+          </button>
+        </div>
+        
+        <div class="box">
+          <p> &:hover, &:focus </p>
+          <button>
+            Default
+          </button>
+        </div>
+
+        <div class="box">
+          <p> &:hover, &:focus </p>
+          <button>
+            Default
+          </button>
+        </div>
+
+        <div class="box">
+          <p> &:hover, &:focus </p>
+          <button>
+            Default
+          </button>
+        </div>
+
+      </div>
+
+      
+
+      <p class="footer f1">https://material.io/resources/icons/?style=round</p>
+      <p class="footer f2">created by username - devChallenges.io</p>
     </div>
+    
+    
   </body>
 </html>

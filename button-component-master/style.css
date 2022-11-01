@@ -1,0 +1,370 @@
+body{
+    margin: 0;
+    display: flex;
+    
+}
+
+/*-------------------------LEFT-SIDE-------------------------*/
+/*-----------------------------------------------------------*/
+
+/*Left side menu*/
+.left_side p{
+
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    margin-left: 48px;
+    
+}
+
+p.home{
+    
+    margin-bottom: 100px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+
+    width: 114px;
+    height: 20px;
+    top: 38px;
+    
+
+}
+
+.home span{
+    color: #F7542E;
+}
+
+div.left_side{
+    
+    background: #FAFBFD;
+    width: 237px;
+    height: 1234px;
+    box-shadow: 9px -1px 41px 0px rgba(0, 0, 0, 0.24);
+    margin-right: 5px;
+    border-radius: 6px;
+
+}
+
+
+.left_side :nth-child(6){
+    font-weight: bold;
+}
+
+/*Buttons list*/
+
+h1{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-left: 83px;
+    margin-top: 53px;
+    
+
+    color: #4F4F4F;
+}
+
+.buttons{
+    background: #FAFBFD;
+    width: 100%;
+    height: 1234px;
+    
+
+}
+
+/*-------------------------RIGHT-SIDE-------------------------*/
+/*------------------------------------------------------------*/
+
+/*buttons - commun*/
+
+.buttons div{
+    
+    display: flex;
+    
+}
+
+div.box > p{
+    margin:0px 0px 12px 0px;
+
+    font-family: 'Ubuntu Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+
+    /* identical to box height */
+
+    /* Gray 1 */
+    color: #333333;
+}
+
+div.box > button{
+
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    border:0px;
+}
+
+.box{
+    flex-direction: column;
+    width: 250px;
+}
+
+.row_1 ,.row_2,.row_3,
+.row_4 ,.row_5,.row_6,
+.row_7 ,.row_8,.row_9{
+    padding-left: 83px;
+    margin-bottom: 45px;
+}
+
+/*buttons row1*/
+.row_1 button{
+    width: 81px;
+    height: 36px;
+    color: #3F3F3F;
+    border-radius: 6px;
+}
+.row_1 .box:nth-child(1) button{
+    background: #E0E0E0;
+    box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    
+}
+.row_1 .box:nth-child(2) button{
+    background: #AEAEAE;
+    box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    
+}
+
+/*buttons row2*/
+.row_2 button{
+    width: 88px;
+    height: 36px;
+    color: #3D5AFE;
+    border-radius: 6px;
+}
+.row_2 .box:nth-child(1) button{
+    border: 1px solid #3D5AFE;
+    
+}
+.row_2 .box:nth-child(2) button{
+    background: rgba(41, 98, 255, 0.1);
+    border: 1px solid #3D5AFE;
+    
+}
+    
+/*buttons row3*/
+.row_3 button{
+    width: 88px;
+    height: 36px;
+    color: #3D5AFE;
+    
+    
+}
+.row_3 .box:nth-child(1) button{
+    background: #FAFBFD;
+    
+}
+.row_3 .box:nth-child(2) button{
+    background: rgba(41, 98, 255, 0.1);
+    border-radius: 6px; 
+}
+
+
+/*buttons row4*/
+.row_4 button{
+    width: 81px;
+    height: 36px;
+
+    background: #3D5AFE;
+    border-radius: 6px;
+    color: #FFFFFF;
+    
+}
+
+/*buttons row5*/
+.row_5 button{
+    width: 88px;
+    height: 36px;
+    
+    
+}
+.row_5 .box:nth-child(1) button{
+    background: #E0E0E0;
+    border-radius: 6px;
+    color: #9E9E9E;
+    
+}
+.row_5 .box:nth-child(2) button{
+    background: #FAFBFD;
+    border-radius: 6px;
+    color: #9E9E9E;
+}
+
+/*buttons row6*/
+.row_6 button{
+    width: 105px;
+    height: 36px;
+    background: #2962FF;
+    box-shadow: 0px 2px 3px rgba(0, 49, 202, 0.2);
+    border-radius: 6px;
+    color: #FFFFFF;
+    
+}
+.row_6 .box button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.right button i {
+    
+    margin-left: 4px;
+}
+.left button i {
+    
+    margin-right: 4px;
+}
+
+/*buttons row7*/
+.row_7 button{
+    
+    
+    background: #2962FF;
+    border-radius: 6px;
+    color: #FFFFFF;
+}
+.row_7 .box:nth-child(1) button{
+    width: 73px;
+    height: 32px;
+    
+}
+.row_7 .box:nth-child(2) button{
+    width: 81px;
+    height: 36px;
+}
+.row_7 .box:nth-child(3) button{
+    width: 93px;
+    height: 42px;
+}
+
+/*buttons row8*/
+.row_8 button{
+    
+    border-radius: 6px;
+    color: #FFFFFF;
+}
+.row_8 .box:nth-child(1) button{
+    
+    width: 81px;
+    height: 36px;
+    background: #E0E0E0;
+    color: #3F3F3F;
+    box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    
+}
+.row_8 .box:nth-child(2) button{
+    width: 81px;
+    height: 36px;
+    background: #2962FF;
+    box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
+
+}
+.row_8 .box:nth-child(3) button{
+
+    width: 104px;
+    height: 36px;
+    background: #455A64;
+    box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);
+
+    
+}
+.row_8 .box:nth-child(4) button{
+    width: 81px;
+    height: 36px;
+    background: #D32F2F;
+    box-shadow: 0px 2px 3px rgba(211, 47, 47, 0.2);
+}
+
+/*buttons row9*/
+.row_9 button{
+    
+    border-radius: 6px;
+    
+}
+.row_9 .box:nth-child(1) button{
+    
+    width: 81px;
+    height: 36px;
+    background: #AEAEAE;
+    color: #3F3F3F;
+    box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    
+}
+.row_9 .box:nth-child(2) button{
+    width: 81px;
+    height: 36px;
+    background: #0039CB;
+    box-shadow: 0px 2px 3px rgba(41, 98, 255, 0.2);
+
+}
+.row_9 .box:nth-child(3) button{
+
+    width: 104px;
+    height: 36px;
+    background: #1C313A;
+    box-shadow: 0px 2px 3px rgba(69, 90, 100, 0.2);
+
+    
+}
+.row_9 .box:nth-child(4) button{
+    width: 81px;
+    height: 36px;
+    background: #9A0007;
+    box-shadow: 0px 2px 3px rgba(211, 47, 47, 0.2);
+}
+
+
+
+.footer{
+    padding-left: 83px;
+}
+.f1{
+
+    font-family: 'Ubuntu Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+
+    color: #828282;
+
+}
+.f2{
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #A9A9A9;
+}
+
+
+
+
+
+
