@@ -34,79 +34,63 @@
 
     <div class="left_side" id="div_left">
 
-      <p class="home" href="#"><span >Dev</span>challenges.io </p>
+      <p class="home" ><span >Dev</span>challenges.io </p>
 
-      <p>Colors</p>
+      <p >Colors</p>
       <p>Typography</p>
-      <p>Space</p>
-      <p>Buttons</p>
-      <p>Inputs</p>
-      <p>Grid</p>
+      <p >Space</p>
+      <p >Buttons</p>
+      <p >Inputs</p>
+      <p >Grid</p>
 
     </div>
+
+    <!--    -->
 
     <div class="buttons">
       <h1> Buttons </h1>
       <h2> Variant </h2>
-      <div class="row_1">
-        <div class="box" id="b1">
+      <div class="row_1 ">
+        <div class="box" >
           <p> &lt; Button &sol; &gt; </p>
-          <button>
+          <button class="var" id="b1">
             Default
           </button>
         </div>
-        <!--  
-        <div class="box">
-          <p> &:hover, &:focus </p>
-          <button>
-            Default
-          </button>
-        </div>-->
 
 
       </div>
 
+      <!--    -->
       <div class="row_2">
         <div class="box">
           <p> &lt; Button variant=”outline” &sol; &gt; </p>
-          <button type="button">
+          <button class="var" id="b2">
             Default
           </button>
         </div>
-        <!--
-        <div class="box">
-          <p> &:hover, &:focus </p>
-          <button type="button">
-            Default
-          </button>
-        </div>
-        -->
 
       </div>
 
+      <!--    -->
       <div class="row_3">
         <div class="box">
           <p> &lt; Button variant=”text” &sol; &gt; </p>
-          <button>
+          <button class="var" id="b3">
             Default
           </button>
         </div>
-        <!--
-        <div class="box">
-          <p> &:hover, &:focus </p>
-          <button>
-            Default
-          </button>
-        </div>-->
+
 
       </div>
 
-      <h2> Shadow </h2>
+      <h2> Shadow-off </h2>
 
+      <!--    -->
       <div class="row_4">
         <div class="box">
           <p> &lt; Button disableShadow &sol; &gt; </p>
-          <button>
+          <button class="shadow" id="b4">
             Default
           </button>
         </div>
@@ -116,17 +100,18 @@
 
       <h2> Disabled </h2>
 
+      <!--    -->
       <div class="row_5">
         <div class="box">
           <p> &lt; Button disabled &sol; &gt; </p>
-          <button>
+          <button class="disable" id="b5">
             Default
           </button>
         </div>
         
         <div class="box">
           <p> Button variant=”text” disabled </p>
-          <button>
+          <button class="disable" id="b6">
             Default
           </button>
         </div>
@@ -135,10 +120,11 @@
 
       <h2> Icon </h2>
 
+      <!--    -->
       <div class="row_6">
         <div class="box left">
           <p> &lt; Button startIcon="arrow_circle_right" &sol; &gt; </p>
-          <button class="icon-1">
+          <button class="icon" id="b7">
             <i class="material-symbols-outlined">arrow_circle_right</i>
             
             Default
@@ -147,7 +133,7 @@
         
         <div class="box left">
           <p> &lt; Button startIcon=”local_grocery_store” &sol; &gt; </p>
-          <button class="icon-2">
+          <button class="icon" id="b8">
             <i class="material-symbols-outlined">local_grocery_store</i>
             Default
           </button>
@@ -156,7 +142,7 @@
         
         <div class="box left">
           <p> &lt; Button startIcon=”token” &sol; &gt; </p>
-          <button class="icon-2">
+          <button class="icon" id="b9">
             <i class="material-symbols-outlined">token</i>
             Default
           </button>
@@ -167,7 +153,7 @@
       <div class="row_6">
         <div class="box right">
           <p> &lt; Button endIcon=”dataset” &sol; &gt; </p>
-          <button class="icon-1">
+          <button class="icon" id="b10">
             
             Default
             <i class="material-symbols-outlined">dataset</i>
@@ -176,7 +162,7 @@
         
         <div class="box right">
           <p> &lt; Button endIcon=”keyboard_voice” &sol; &gt; </p>
-          <button class="icon-2">
+          <button class="icon" id="b11">
             Default
             <i class="material-symbols-outlined">keyboard_voice</i>
           </button>
@@ -184,7 +170,7 @@
 
         <div class="box right">
           <p> &lt; Button endIcon=”app_registration” &sol; &gt; </p>
-          <button class="icon-1">
+          <button class="icon" id="b12">
             
             
             Default
@@ -201,21 +187,21 @@
       <div class="row_7">
         <div class="box">
           <p> &lt; Button size=”sm” &sol; &gt; </p>
-          <button>
+          <button class="size" id="b13">
             Default
           </button>
         </div>
         
         <div class="box">
           <p> &lt; Button size=”md” &sol; &gt; </p>
-          <button>
+          <button class="size" id="b14">
             Default
           </button>
         </div>
 
         <div class="box">
           <p> &lt; Button size=”lg” &sol; &gt; </p>
-          <button>
+          <button class="size" id="b15">
             Default
           </button>
         </div>
@@ -226,72 +212,42 @@
       <div class="row_8">
         <div class="box">
           <p> &lt; Button color=”default” &sol; &gt; </p>
-          <button>
+          <button class="color" id="b16">
             Default
           </button>
         </div>
         
         <div class="box">
           <p> &lt; Button color=”primary” &sol; &gt; </p>
-          <button>
+          <button class="color" id="b17">
             Primary
           </button>
         </div>
 
         <div class="box">
           <p> &lt; Button color=”secondary” &sol; &gt; </p>
-          <button>
+          <button class="color" id="b18">
             Secondary
           </button>
         </div>
 
         <div class="box">
           <p> &lt; Button color=”danger” &sol; &gt; </p>
-          <button>
+          <button class="color" id="b19">
             Danger
           </button>
         </div>
 
       </div>
 
-      <!--
-      <div class="row_9">
-        <div class="box">
-          <p> &lt; Button variant=”text” &sol; &gt; </p>
-          <button>
-            Default
-          </button>
-        </div>
-        
-        <div class="box">
-          <p> &:hover, &:focus </p>
-          <button>
-            Default
-          </button>
-        </div>
-
-        <div class="box">
-          <p> &:hover, &:focus </p>
-          <button>
-            Default
-          </button>
-        </div>
-
-        <div class="box">
-          <p> &:hover, &:focus </p>
-          <button>
-            Default
-          </button>
-        </div>
-
-      </div>
-      -->
+     
       
 
       <p class="footer f1">https://material.io/resources/icons/?style=round</p>
       <p class="footer f2">created by username - devChallenges.io</p>
     </div>
     
-    
+    <script src="script.js"></script>
+
   </body>
 </html>
