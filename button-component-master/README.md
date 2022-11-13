@@ -90,5 +90,5 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
+- Website [your-website.com](https://{devchallenges-buttons-option.netlify.app})
+- GitHub [@your-username](https://{github.com/liolle})

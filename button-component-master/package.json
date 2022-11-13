@@ -1,0 +1,27 @@
+{
+  "name": "button-component-master",
+  "version": "1.0.0",
+  "description": "challenge_1",
+  "main": "script.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liolle/Challenges.git"
+  },
+  "keywords": [
+    "buttons"
+  ],
+  "author": "Laurent Etienne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liolle/Challenges/issues"
+  },
+  "homepage": "https://github.com/liolle/Challenges#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  }
+}
