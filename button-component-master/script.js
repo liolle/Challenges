@@ -110,7 +110,7 @@ function changeIcon(btn){
         }
 
         icon.style.background = map.get(`${icon.id}`)[0]; 
-        btn.style.background = map.get(`${icon.id}`)[1];
+        btn.style.background = map.get(`${btn.id}`)[1];
         icon = btn;
     }
 }
@@ -130,7 +130,7 @@ function changeSize(btn){
         }
 
         size.style.background = map.get(`${size.id}`)[0]; 
-        btn.style.background = map.get(`${size.id}`)[1];
+        btn.style.background = map.get(`${btn.id}`)[1];
         size = btn;
     }
 }
@@ -142,15 +142,15 @@ function changeColor(btn){
         return;
     }
     else{
-
+        
         if(color.id == btn.id){
             color.style.background = map.get(`${color.id}`)[0];
             color = null;
             return
         }
 
-        color.style.background = map.get(`${color.id}`)[0]; 
-        btn.style.background = map.get(`${color.id}`)[1];
+        color.style.background = map.get(`${color.id}`)[0];
+        btn.style.background = map.get(`${btn.id}`)[1];
         color = btn;
     }
 }
