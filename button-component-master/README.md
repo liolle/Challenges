@@ -37,14 +37,16 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](/ScreenShot.png)
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
+<!--
 - Where can I see your demo?
 - What was your experience?
 - What have you learned/improved?
 - Your wisdom? :)
+-->
 
 ### Built With
 
@@ -71,13 +73,22 @@ $ git clone https://github.com/liolle/Challenges.git
 
 # Navigate to the /button-component-master directory
 
-$ cd button-component-master
+$ cd Challenges/button-component-master
 
 # Install dependencies
 $ npm install
 
 # Run the app
 $ npm start
+
+# Open local web page on port 3000
+# Windows:
+$ start http://localhost:3000
+# Linux:
+$ xdg-open http://localhost:3000
+# macOS:
+$ start http://localhost:3000
+
 ```
 
 ## Acknowledgements
