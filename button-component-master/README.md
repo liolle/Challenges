@@ -37,7 +37,8 @@
 
 ## Overview
 
-![screenshot](/ScreenShot.png)
+![screenshot](/Documentation/button-component-master/ScreenShot.png)
+
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
@@ -101,5 +102,5 @@ $ start http://localhost:3000
 
 ## Contact
 
-- Website [your-website.com](https://{devchallenges-buttons-option.netlify.app})
-- GitHub [@your-username](https://{github.com/liolle})
+- Website [devchallenges-buttons-option](https://devchallenges-buttons-option.netlify.app/)
+- GitHub [liolle](https://github.com/liolle)
