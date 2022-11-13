@@ -8,8 +8,8 @@ let size;
 let color;
 
 const map = new Map();
-
-map.set('b1',['#E0E0E0','#AEAEAE']) // [default color, selected color]
+// [default color, selected color]
+map.set('b1',['#E0E0E0','#AEAEAE']) 
 map.set('b2',['#ffffff','#2962ff33'])
 map.set('b3',['#ffffff','#2962ff33'])
 map.set('b4',['#3D5AFE','#0039CB'])
