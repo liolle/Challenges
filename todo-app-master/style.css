@@ -10,6 +10,11 @@ body{
     
 } 
 
+.hidden{
+    /* need to be importante to override add_bar*/
+    display: none !important;
+}
+
 /*Slide_bar*/
 
 .slider,
