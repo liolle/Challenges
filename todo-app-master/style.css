@@ -33,9 +33,11 @@ body{
 
 }
 
-.indicator {
+.indicator,
+.marker {
     width: 16%;
     height: 100%;
+    cursor: pointer;
 }
 
 .indicator div{
@@ -47,12 +49,7 @@ body{
 }
 
 
-.indicator:nth-child(2) div{
-    visibility: hidden;
-}
-.indicator:nth-child(3) div{
-    visibility: hidden;
-}
+
 
 .slider_elem{
     
@@ -153,4 +150,26 @@ li input {
     margin: 0 5px 0 0;
 
     
+}
+
+.list-items {
+    padding: 0;
+    margin: 0;
+    display: none;
+
+}
+
+.active_list{
+    display: block;
+}
+
+.list-items:nth-child(1){
+    background-color: blueviolet;
+    
+}
+.list-items:nth-child(2){
+    background-color:chartreuse;
+}
+.list-items:nth-child(3){
+    background-color:chocolate;
 }

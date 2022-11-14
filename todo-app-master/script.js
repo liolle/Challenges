@@ -58,3 +58,28 @@ add_button.addEventListener("click",()=>{
         task_input.value = "";
     }
 });
+
+/* Slide indicator */ 
+
+const marker_list = document.querySelectorAll('.marker');
+const lists =  document.querySelectorAll('.list-items');
+
+
+for (let index = 0; index < marker_list.length; index++) {
+    marker_list[index].addEventListener('click',()=>{
+
+        
+        if(!marker_list[index].classList.contains("indicator")){
+            /* Switch indicator */ 
+            let current_indicator = document.querySelector('.indicator');           
+            current_indicator.classList.remove("indicator");
+            marker_list[index].classList.add("indicator");
+
+            /* show correct list */
+            let current_list = document.querySelector('.active_list'); 
+            current_list.classList.remove("active_list");
+            lists[index].classList.add("active_list");
+        }
+    });
+    
+}
