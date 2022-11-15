@@ -41,6 +41,7 @@ for (let index = 0; index < input.length; index++) {
     
 }
 
+
 function addLocal(task){
 
     for(let char of task){
@@ -71,16 +72,36 @@ function addLocal(task){
         newValue: new_tasck
     });
 
+    console.log(evt);
+
     dispatchEvent(evt);
     task_input.value = "";
 }
 
-function addLi(taskName,ul,statu){
+function changeStateLocal(key, status){
+    var task = Tasck.creatFromString(localStorage.getItem(key));
+    oldV = task.toString;
+    task.statu = status;
+    localStorage.setItem(key,task);
+
+    //trigger storage event 
+    var evt = new StorageEvent('storage', {
+        key: key,
+        newValue: task,
+        oldValue: oldV
+    });
+
+    dispatchEvent(evt);
+
+}
+
+function addLi(taskName,ul,statu,key){
 
     var li = document.createElement("li");
     var inp = document.createElement("input");
 
     inp.setAttribute("type","checkbox");
+    li.classList.add(`id_${key}`);
     li.appendChild(inp);
     li.appendChild(document.createTextNode(taskName));
 
@@ -88,39 +109,73 @@ function addLi(taskName,ul,statu){
         if (inp.checked){
             li.style.textDecoration = "line-through";
             li.style.color = "gray";
+            changeStateLocal(key,"done");
         }
         else{
             li.style.textDecoration = "none";
             li.style.color = "black";
+            changeStateLocal(key,"todo");
         }
     });
 
     if(statu === "done"){
         inp.click();
+        li.style.textDecoration = "line-through";
+        li.style.color = "gray";
     }
     ul.appendChild(li);
 
 
 }
 
+function changeLi(taskName,statu,key,cl){
+
+    let old_li = document.querySelector(`${cl} .id_${key}`);
+    var li = document.createElement("li");
+    var inp = document.createElement("input");
+
+    inp.setAttribute("type","checkbox");
+    li.classList.add(`id_${key}`);
+    li.appendChild(inp);
+    li.appendChild(document.createTextNode(taskName));
+
+    inp.addEventListener("change",()=>{
+        if (inp.checked){
+            li.style.textDecoration = "line-through";
+            li.style.color = "gray";
+            changeStateLocal(key,"done");
+        }
+        else{
+            li.style.textDecoration = "none";
+            li.style.color = "black";
+            changeStateLocal(key,"todo");
+        }
+    });
+
+    if(statu === "done"){
+        inp.click();
+        li.style.textDecoration = "line-through";
+        li.style.color = "gray";
+    }
+    old_li.parentNode.replaceChild(li,old_li);
+
+}
+
 
  function addTasck(task,key) {
-
-
-    //var ul = document.querySelector('.list-items ul');
 
     task_split = task.split(',');
 
 
     switch (task_split[1]){
         case "todo":
-            addLi(task_split[0],uls[0],"todo");
-            addLi(task_split[0],uls[1],"todo");
+            addLi(task_split[0],uls[0],"todo",key);
+            addLi(task_split[0],uls[1],"todo",key);
             break;
 
         case "done":
-            addLi(task_split[0],uls[0],"done");
-            addLi(task_split[0],uls[2],"done");
+            addLi(task_split[0],uls[0],"done",key);
+            addLi(task_split[0],uls[2],"done",key);
             break;
         default:
             break;
@@ -129,6 +184,52 @@ function addLi(taskName,ul,statu){
     
 }
 
+function mathChangesTask(key){
+
+
+    /*
+        We assume that the task state in localStorage.getItem{key} changed 
+        (from: 'todo' to: 'done' or the othre way around)
+        therfore we need to update all the ul elements.
+
+    */
+
+    task_split = localStorage.getItem(key).split(',');
+
+    switch (task_split[1]){
+        case "todo":
+
+            /*
+                from: done => todo 
+                1: remove li from complete 
+                2: add it in active
+            */
+           let rm_todo_li = document.querySelector(`.complete .id_${key}`);
+           rm_todo_li.remove();
+
+           addLi(task_split[0],uls[1],"todo",key);
+           changeLi(task_split[0],"todo",key,".all");
+
+            break;
+
+        case "done":
+            /*
+                from: to => done 
+                1: remove li from active 
+                2: add it in complete
+            */
+            let rm_done_li = document.querySelector(`.active .id_${key}`);
+            rm_done_li.remove();
+    
+            addLi(task_split[0],uls[2],"done",key);
+            changeLi(task_split[0],"done",key,".all");
+
+            break;
+        default:
+            break;
+    }
+
+}
 
 add_button.addEventListener("click",()=>{
     if (task_input.value != "" && task_input.value != null && task_input.value != undefined){
@@ -165,7 +266,6 @@ for (let index = 0; index < marker_list.length; index++) {
             lists[index].classList.add("active_list");
 
             if (index == 2){
-                console.log("hidden");
                 add_bar.classList.add("hidden");
 
             }
@@ -179,10 +279,17 @@ for (let index = 0; index < marker_list.length; index++) {
 }
 
 window.addEventListener('storage', (e)=>{
-    console.log(e)
-    if (e.newValue != null){
+    //console.log(e)
+    if (e.newValue != null && e.oldValue == null){
         let key = parseInt(e.key);
         addTasck(e.newValue,key);
+    }
+    else if(e.newValue != null){
+        // click all checkbox with id_${key}
+        let key = parseInt(e.key);
+
+        mathChangesTask(key);
+
     }
 
 }, false);
