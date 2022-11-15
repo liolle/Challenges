@@ -97,13 +97,43 @@ function changeStateLocal(key, status){
 
 function addLi(taskName,ul,statu,key){
 
+    
+
     var li = document.createElement("li");
     var inp = document.createElement("input");
+    var div = document.createElement("div");
 
     inp.setAttribute("type","checkbox");
-    li.classList.add(`id_${key}`);
+
+    div.classList.add("li-item");
+    div.classList.add(`id_${key}`);
+    
     li.appendChild(inp);
     li.appendChild(document.createTextNode(taskName));
+    div.appendChild(li);
+
+    if(ul == uls[2]){
+        //<i class="material-symbols-rounded user-unselect"> delete </i> 
+        var i = document.createElement("i");
+        i.classList.add("material-symbols-rounded");
+        i.textContent = "delete";
+
+        div.appendChild(i);
+
+        i.addEventListener('click',()=>{
+            localStorage.removeItem(key);
+            //trigger storage event 
+            var evt = new StorageEvent('storage', {
+                key: key,
+                oldValue: `${taskName},${statu}`
+            });
+
+        console.log(evt);
+
+        dispatchEvent(evt);
+            div.remove();
+        });
+    }
 
     inp.addEventListener("change",()=>{
         if (inp.checked){
@@ -123,21 +153,26 @@ function addLi(taskName,ul,statu,key){
         li.style.textDecoration = "line-through";
         li.style.color = "gray";
     }
-    ul.appendChild(li);
+    ul.appendChild(div);
 
 
 }
 
 function changeLi(taskName,statu,key,cl){
 
-    let old_li = document.querySelector(`${cl} .id_${key}`);
+    let old_li = document.querySelector(`${cl} div.id_${key}`);
+
     var li = document.createElement("li");
     var inp = document.createElement("input");
+    var div = document.createElement("div");
 
     inp.setAttribute("type","checkbox");
-    li.classList.add(`id_${key}`);
+
     li.appendChild(inp);
     li.appendChild(document.createTextNode(taskName));
+    div.appendChild(li);
+    div.classList.add("li-item");
+    div.classList.add(`id_${key}`);
 
     inp.addEventListener("change",()=>{
         if (inp.checked){
@@ -157,7 +192,7 @@ function changeLi(taskName,statu,key,cl){
         li.style.textDecoration = "line-through";
         li.style.color = "gray";
     }
-    old_li.parentNode.replaceChild(li,old_li);
+    old_li.parentNode.replaceChild(div,old_li);
 
 }
 
@@ -231,6 +266,17 @@ function mathChangesTask(key){
 
 }
 
+function removeFromList(key){
+
+    const rm_every= document.querySelectorAll(`div.id_${key}`);
+
+    rm_every.forEach((elem)=>{
+        elem.remove();
+
+    });
+
+}
+
 add_button.addEventListener("click",()=>{
     if (task_input.value != "" && task_input.value != null && task_input.value != undefined){
 
@@ -279,17 +325,21 @@ for (let index = 0; index < marker_list.length; index++) {
 }
 
 window.addEventListener('storage', (e)=>{
-    //console.log(e)
+    let key = parseInt(e.key);
     if (e.newValue != null && e.oldValue == null){
-        let key = parseInt(e.key);
+        //element added to localStorage
+        
         addTasck(e.newValue,key);
     }
     else if(e.newValue != null){
-        // click all checkbox with id_${key}
-        let key = parseInt(e.key);
+        //element modify in localStorage
 
         mathChangesTask(key);
 
+    }
+    else if(e.oldValue != null && e.newValue == null){
+        //element removed from  localStorage
+        removeFromList(key)
     }
 
 }, false);

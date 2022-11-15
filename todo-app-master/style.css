@@ -137,8 +137,7 @@ body{
     align-items: center;
     height: 30px;
 
-    margin-top: 15px;
-    margin-bottom: 15px;
+
 
 }
 
@@ -177,4 +176,21 @@ li input {
 }
 .list-items:nth-child(3){
     background-color:chocolate;
+}
+
+.li-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+
+.li-item i {
+    color: #BDBDBD;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.user-unselect{
+    user-select: none;
 }
