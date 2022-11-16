@@ -63,7 +63,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 # Clone this repository
 $ git clone https://github.com/liolle/Challenges.git
 
-# Navigate to the /button-component-master directory
+# Navigate to the /todo-app-master directory
 
 $ cd Challenges/todo-app-master
 
@@ -92,5 +92,4 @@ $ start http://localhost:3000
 
 ## Contact
 
-- Website [devchallenges-todo-list](https://devchallenges-todo-list.netlify.app/)
 - GitHub [liolle](https://github.com/liolle)
