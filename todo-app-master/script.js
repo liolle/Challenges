@@ -290,6 +290,8 @@ add_button.addEventListener("click",()=>{
     }
 });
 
+
+
 /* Slide indicator */ 
 
 const marker_list = document.querySelectorAll('.marker');
@@ -324,8 +326,45 @@ for (let index = 0; index < marker_list.length; index++) {
     
 }
 
+function rm_div(key){
+
+    div_list = document.querySelectorAll(`.id_${key}`);
+
+    localStorage.removeItem(key);
+
+    div_list.forEach((elm)=>{
+        elm.remove();
+    })
+
+}
+
 window.addEventListener('storage', (e)=>{
+
+    if (!e.key){
+
+        
+        div_list = document.querySelectorAll('.complete div');
+
+        div_list.forEach((elem)=>{
+            let elem_tab = elem.getAttribute("class").split(' ');
+
+            if (elem_tab.length >1){
+                // id_${key}   
+                let key = parseInt(elem_tab[1].split('_')[1]);
+                console.log(key);
+                rm_div(key);
+            }
+            
+            
+        });
+
+        return
+    }
+
     let key = parseInt(e.key);
+
+    
+
     if (e.newValue != null && e.oldValue == null){
         //element added to localStorage
         
@@ -350,3 +389,17 @@ for (let index = 0; index < localStorage.length; index++) {
     let key = localStorage.key(index);
     addTasck(localStorage.getItem(key),key);    
 }
+
+const delet_all_btn = document.querySelector(".list-items button");
+
+delet_all_btn.addEventListener('click',()=>{
+    //delete all
+
+    //trigger storage event 
+    var evt = new StorageEvent('storage', {
+        key: null
+    });
+
+    dispatchEvent(evt);
+
+});
