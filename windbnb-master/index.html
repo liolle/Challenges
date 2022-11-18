@@ -13,8 +13,8 @@
   <div class="nav_bar">
     <p class="logo"> <i class="material-symbols-rounded"> change_history </i> windbnb </p>
     <div class="search_bar">
-      <p>Helsinki,Finland</p>
-      <p>add guest </p>
+      <p class="location">Helsinki,Finland</p>
+      <p class="options">add guest </p>
       <i class="material-symbols-rounded"> search </i>
     </div>
   </div>
@@ -26,19 +26,27 @@
       <p> x stays </p>
     </div>
 
-    <div class="cards">
-      <div class="card_1 card">
-        <img src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80" alt="card_1">
-        <div class="card_bottom">
-          <p> type + x beds </p>
-          <p> 
-            <i class="material-symbols-rounded"> star </i> note 
-          </p>
-        </div>
-        <p class="card_tile"> title </p>
-      </div>
 
-      
+
+    <div class="cards">
+
+      <template data-location>
+        <div class="card">
+          <img src="" alt="Card">
+          <div class="card_bottom">
+            <div class="host">
+              <div class="super_host"> <div>SUPER HOST</div>  </div>
+              <p> type + x beds </p>
+            </div>
+            
+            <div class="note">
+              <i class="material-symbols-rounded"> star </i>
+              <p>note</p>
+            </div>
+          </div>
+          <p class="card_title"> title </p>
+        </div>
+      </template>
 
     </div>
 
