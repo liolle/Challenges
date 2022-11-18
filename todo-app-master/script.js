@@ -361,10 +361,10 @@ window.addEventListener('storage', (e)=>{
         return
     }
 
-    let key = parseInt(e.key);
-
     
-
+    let key = parseInt(e.key);
+    
+    
     if (e.newValue != null && e.oldValue == null){
         //element added to localStorage
         

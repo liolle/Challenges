@@ -1,0 +1,124 @@
+
+body{
+    padding: 0 94px;
+}
+
+img {
+    width: 395px;
+    height: 269px;
+    border-radius: 24px;
+
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+}
+
+/* display flex */
+
+.nav_bar,
+.nav_bar p,
+.nav_bar div,
+.info_bar,
+.card_bottom,
+p{
+    display: flex;
+    align-items: center;
+}
+
+.card_bottom{
+    justify-content: space-between;
+}
+
+.info_bar{
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.info_bar p:first-child{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #333333;
+}
+
+.info_bar p:last-child{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #4F4F4F;
+}
+
+.nav_bar{
+    user-select: none;
+    justify-content:space-between;
+}
+
+.nav_bar p{
+
+    justify-content:left;
+
+}
+
+.logo{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #EB5757;
+}
+
+i{
+    color: #EB5757;
+}
+
+.search_bar p{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    color: #333333;
+}
+.search_bar p:nth-child(2){
+
+
+    color: #BDBDBD;
+}
+
+.nav_bar div{
+
+    justify-content: space-between;
+}
+
+.nav_bar div p {
+    margin-right: 20px;
+}
+
+.card_bottom{
+    height: 3rem;
+}
+.card_bottom p:nth-child(1){
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #828282;
+}
+
+.card_bottom p:nth-child(2){
+    color: #4F4F4F;
+}
+
+.card_title{
+    margin-top: 5px;
+}
+
