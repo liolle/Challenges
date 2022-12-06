@@ -171,6 +171,6 @@ search_icon.addEventListener('click',()=>{
 
 let db = new DBHandler("./stays.json")
 
-console.log(dummy_var)
+let tab = [1,2,3]
 
 
